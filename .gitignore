@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# przyklad env dla wspolpracownikow (bez sekretow)
+!.env.local.example

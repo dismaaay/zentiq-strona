@@ -121,7 +121,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Nie udało się teraz wysłać wyceny. Spróbuj ponownie za chwilę lub napisz na zentiq.kontakt@gmail.com.",
+          "Nie udało się teraz wysłać wyceny. Spróbuj ponownie za chwilę lub napisz na kontakt@zentiq.pl.",
       },
       { status: 502 }
     );

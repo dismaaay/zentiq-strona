@@ -11,7 +11,7 @@ export const siteConfig = {
     "Zentiq buduje strony dla firm. Gotowy projekt zobaczysz za darmo w 24 godziny i zapłacisz dopiero, gdy zechcesz go zatrzymać. Ceny od 500 do 750 zł.",
   url: "https://zentiq.pl",
   contact: {
-    email: "zentiq.kontakt@gmail.com",
+    email: "kontakt@zentiq.pl",
     // TODO(właściciel): podmień na prawdziwy numer. Dopóki numer zawiera
     // "000 000 000", strona NIE renderuje go publicznie.
     phone: "+48 000 000 000",

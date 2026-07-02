@@ -4,16 +4,16 @@ import nodemailer from "nodemailer";
  * Konfiguracja wysyłki e-mail przez SMTP (domyślnie Gmail).
  *
  * Wymagane zmienne środowiskowe (plik .env.local):
- *   MAIL_USER  - login SMTP (np. zentiq.kontakt@gmail.com)
+ *   MAIL_USER  - login SMTP (np. kontakt@zentiq.pl)
  *   MAIL_PASS  - hasło aplikacji (Gmail: „Hasła aplikacji", NIE zwykłe hasło)
  * Opcjonalne:
- *   MAIL_TO    - adres odbiorcy (domyślnie zentiq.kontakt@gmail.com)
+ *   MAIL_TO    - adres odbiorcy (domyślnie kontakt@zentiq.pl)
  *   MAIL_FROM  - adres nadawcy (domyślnie = MAIL_USER)
  *   SMTP_HOST  - host SMTP (domyślnie smtp.gmail.com)
  *   SMTP_PORT  - port SMTP (domyślnie 465)
  */
 
-const MAIL_TO = process.env.MAIL_TO || "zentiq.kontakt@gmail.com";
+const MAIL_TO = process.env.MAIL_TO || "kontakt@zentiq.pl";
 
 export function getRecipient(): string {
   return MAIL_TO;

@@ -76,9 +76,9 @@ export function MiniSalon() {
             letterSpacing: "-0.02em",
           }}
         >
-          Skóra w dobrych
+          Twoja skóra
           <br />
-          <em>rękach.</em>
+          <em>w najlepszej formie.</em>
         </div>
         <div style={{ marginTop: 14, fontSize: 14.5, color: c.soft }}>
           Kosmetologia estetyczna w centrum Gdyni.

@@ -12,10 +12,8 @@ export const siteConfig = {
   url: "https://zentiq.pl",
   contact: {
     email: "kontakt@zentiq.pl",
-    // TODO(właściciel): podmień na prawdziwy numer. Dopóki numer zawiera
-    // "000 000 000", strona NIE renderuje go publicznie.
-    phone: "+48 000 000 000",
-    phoneHref: "tel:+48000000000",
+    phone: "+48 727 022 737",
+    phoneHref: "tel:+48727022737",
     // TODO(właściciel): podmień na prawdziwy adres. Adres nie jest
     // renderowany na stronie, dopóki jest placeholderem.
     address: "ul. Przykładowa 1, 00-000 Warszawa",

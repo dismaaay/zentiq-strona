@@ -267,7 +267,14 @@ export function Pricing() {
 
                         <p className="text-center text-xs leading-relaxed text-ink-2">
                           Przesłanie formularza nie zobowiązuje do zakupu
-                          strony.
+                          strony. Wysyłając je, akceptujesz{" "}
+                          <a
+                            href="/polityka-prywatnosci"
+                            className="underline underline-offset-2 hover:text-ink"
+                          >
+                            Politykę prywatności
+                          </a>
+                          .
                         </p>
                       </form>
                     </div>

@@ -1,4 +1,5 @@
 import { navItems, siteConfig } from "@/lib/site";
+import { legalLinks } from "@/lib/legal";
 import { Container } from "./ui";
 
 export function Footer() {
@@ -31,9 +32,25 @@ export function Footer() {
             {siteConfig.contact.email}
           </a>
         </div>
-        <p className="mt-8 text-xs text-paper/60">
-          © {year} Zentiq. Wszelkie prawa zastrzeżone.
-        </p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs text-paper/60">
+            © {year} Zentiq. Wszelkie prawa zastrzeżone.
+          </p>
+          <nav
+            aria-label="Dokumenty prawne"
+            className="flex flex-wrap gap-x-5 gap-y-1"
+          >
+            {legalLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-xs text-paper/60 transition-colors duration-150 hover:text-paper"
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+        </div>
       </Container>
     </footer>
   );

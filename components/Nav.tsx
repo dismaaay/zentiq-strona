@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { navItems } from "@/lib/site";
 
 /**
@@ -15,6 +16,11 @@ export function Nav() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
   const ticking = useRef(false);
+
+  // Kotwice sekcji żyją na stronie głównej. Poza nią (np. strony prawne)
+  // linkujemy do „/#…", żeby przenieść na home i przewinąć do sekcji.
+  const home = usePathname() === "/";
+  const to = (hash: string) => (home ? hash : `/${hash}`);
 
   // Scroll: przelaczenie szkla + wykrycie ciemnej klamry pod nawigacja.
   useEffect(() => {
@@ -97,7 +103,7 @@ export function Nav() {
           />
 
           <a
-            href="#start"
+            href={home ? "#start" : "/"}
             onClick={() => setOpen(false)}
             className={`text-lg font-semibold tracking-tight transition-colors duration-300 ${
               dark ? "text-paper" : "text-ink"
@@ -112,7 +118,7 @@ export function Nav() {
             {navItems.map((item) => (
               <li key={item.href}>
                 <a
-                  href={item.href}
+                  href={to(item.href)}
                   className={`text-sm font-medium transition-colors duration-300 ${
                     active === item.href
                       ? dark
@@ -130,7 +136,7 @@ export function Nav() {
           </ul>
 
           <a
-            href="#cennik"
+            href={to("#cennik")}
             className="hidden items-center rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition-colors duration-150 hover:bg-accent-strong md:inline-flex"
           >
             Wyceń stronę
@@ -177,7 +183,7 @@ export function Nav() {
                 style={{ animationDelay: `${i * 60}ms` }}
               >
                 <a
-                  href={item.href}
+                  href={to(item.href)}
                   onClick={() => setOpen(false)}
                   className="type-h3 block py-2 text-ink"
                 >
@@ -191,7 +197,7 @@ export function Nav() {
             style={{ animationDelay: `${navItems.length * 60}ms` }}
           >
             <a
-              href="#cennik"
+              href={to("#cennik")}
               onClick={() => setOpen(false)}
               className="block rounded-full bg-accent px-6 py-3.5 text-center text-base font-medium text-white"
             >

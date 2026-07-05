@@ -492,6 +492,61 @@ details.faq[open]::details-content {
   block-size: auto;
 }
 
+/* --- Dokumenty prawne: czytelna, spokojna typografia treści --- */
+.legal-prose {
+  color: var(--color-ink);
+  font-size: 1rem;
+}
+.legal-prose h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-top: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+.legal-prose h2:first-child {
+  margin-top: 0;
+}
+.legal-prose h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.legal-prose p {
+  margin-bottom: 1rem;
+  line-height: 1.72;
+}
+.legal-prose ul,
+.legal-prose ol {
+  margin: 0 0 1rem 1.35rem;
+  line-height: 1.72;
+}
+.legal-prose ul {
+  list-style: disc;
+}
+.legal-prose ol {
+  list-style: decimal;
+}
+.legal-prose li {
+  margin-bottom: 0.4rem;
+}
+.legal-prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal-prose strong {
+  font-weight: 600;
+}
+.legal-prose address {
+  font-style: normal;
+}
+
 /* --- Reveal on scroll: JS dodaje .is-visible (IntersectionObserver) --- */
 .reveal {
   opacity: 0;

@@ -128,6 +128,18 @@ export function Contact() {
                   >
                     {status === "sending" ? "Wysyłanie..." : "Wyślij wiadomość"}
                   </Button>
+
+                  <p className="text-xs leading-relaxed text-ink-2">
+                    Wysyłając wiadomość, akceptujesz zasady przetwarzania danych
+                    opisane w{" "}
+                    <a
+                      href="/polityka-prywatnosci"
+                      className="underline underline-offset-2 hover:text-ink"
+                    >
+                      Polityce prywatności
+                    </a>
+                    .
+                  </p>
                 </form>
               )}
             </div>

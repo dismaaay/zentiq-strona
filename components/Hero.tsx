@@ -26,6 +26,9 @@ export function Hero() {
         <div className="grid items-center gap-12 pb-16 pt-32 sm:pt-36 lg:grid-cols-12 lg:gap-10 lg:pb-24">
           <div className="lg:col-span-6">
             <h1 className="type-display text-ink">
+              <span className="mb-5 block font-mono text-xs uppercase tracking-[0.2em] text-ink-2 motion-safe:animate-rise-in">
+                Strony internetowe dla firm
+              </span>
               <span className="-mb-[0.12em] block overflow-hidden pb-[0.12em]">
                 <span className="block motion-safe:animate-line-up">
                   Najpierw zobacz.

@@ -128,6 +128,24 @@ export function Pricing() {
           </Reveal>
         </div>
 
+        <Reveal delay={110}>
+          <ul className="mt-10 grid gap-3 sm:grid-cols-3">
+            {[
+              { label: "Wizytówka / strona firmowa", price: "od 500 zł" },
+              { label: "Strona z panelem klienta", price: "700 zł" },
+              { label: "Sklep internetowy", price: "750 zł" },
+            ].map((tier) => (
+              <li
+                key={tier.label}
+                className="rounded-2xl bg-field px-5 py-4"
+              >
+                <p className="text-sm text-ink-2">{tier.label}</p>
+                <p className="type-price mt-1 text-lg text-ink">{tier.price}</p>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+
         <div className="mt-14 grid gap-12 lg:grid-cols-[1fr_400px] lg:gap-16">
           {/* Pytania */}
           <Reveal delay={120}>

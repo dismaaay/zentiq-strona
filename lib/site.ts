@@ -28,7 +28,7 @@ export function isPlaceholder(value: string): boolean {
 /** Pozycje nawigacji. `href` wskazuje sekcje na stronie głównej. */
 export const navItems = [
   { label: "Proces", href: "#proces" },
-  { label: "Realizacje", href: "#realizacje" },
+  { label: "Projekty", href: "#realizacje" },
   { label: "Cennik", href: "#cennik" },
   { label: "Kontakt", href: "#kontakt" },
 ] as const;

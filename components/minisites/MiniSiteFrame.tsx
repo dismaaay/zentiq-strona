@@ -47,6 +47,10 @@ export function MiniSiteFrame({
       ref={ref}
       role="img"
       aria-label={label}
+      // data-nosnippet: treść makiety to fikcyjne dane demo (nazwy, adresy, telefony,
+      // opinie). Bez tego crawler/LLM może je zassać jako fakty o Zentiq
+      // (np. „Zentiq to salon w Gdyni" albo demo-telefon jako nasz kontakt).
+      data-nosnippet
       className={`relative aspect-[4/3] w-full overflow-hidden ${className}`}
       style={{ background: surface }}
     >
